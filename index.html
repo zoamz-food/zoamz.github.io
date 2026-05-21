@@ -3,246 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZOAMZ - Shop Premium Jaggery Cubes & Powder</title>
+    <title>ZOAMZ - Premium Organic Jaggery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; color: #333; background: #fffaf0; }
-        
-        header {
-            background: #8B4513;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo { font-size: 2.5rem; font-weight: bold; letter-spacing: 2px; }
-        .tagline { font-size: 1rem; opacity: 0.9; }
-
-        .promo-bar {
-            background: #DAA520;
-            color: #fff;
-            text-align: center;
-            padding: 12px;
-            font-weight: bold;
-        }
-
-        .nav {
-            background: #654321;
-            padding: 10px;
-            text-align: center;
-        }
-        .nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://picsum.photos/id/1015/2000/800');
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-        }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.4rem; max-width: 700px; margin: 0 auto; }
-
-        .container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            margin: 60px 0 40px;
-            color: #8B4513;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 20px 0;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-        }
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        .product-img {
-            height: 280px;
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://picsum.photos/id/1015/2000/1200');
             background-size: cover;
             background-position: center;
         }
-        .product-info {
-            padding: 18px;
+        .product-card {
+            transition: all 0.3s ease;
         }
-        .product-title {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #333;
-        }
-        .price {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #8B4513;
-        }
-        .original-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 0.95rem;
-        }
-        .add-to-cart {
-            background: #8B4513;
-            color: white;
-            border: none;
-            padding: 12px;
-            width: 100%;
-            margin-top: 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        footer {
-            background: #3C2F2F;
-            color: #ddd;
-            text-align: center;
-            padding: 60px 20px 30px;
-            margin-top: 80px;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
-<body>
+<body class="bg-orange-50 font-sans">
 
-    <!-- Promo Bar -->
-    <div class="promo-bar">
-        ⭐ Free Shipping in India on orders above ₹499 | Use code <strong>LAUNCH25</strong> for 25% OFF
+    <!-- Top Bar -->
+    <div class="bg-amber-800 text-white text-center py-2 text-sm">
+        🌿 100% Pure • Chemical Free • Free Shipping on orders above ₹499
     </div>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">ZOAMZ</div>
-            <div class="tagline">Premium Organic Jaggery • Cubes & Powder</div>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-3xl font-bold text-amber-900">ZOAMZ</div>
+            
+            <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
+                <a href="#" class="hover:text-amber-800">Shop All</a>
+                <a href="#" class="hover:text-amber-800">Gud Bites</a>
+                <a href="#" class="hover:text-amber-800">Jaggery Powder</a>
+                <a href="#" class="hover:text-amber-800">Flavoured</a>
+                <a href="#" class="hover:text-amber-800">Combos</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <i class="fa-solid fa-magnifying-glass text-xl cursor-pointer"></i>
+                <i class="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Navigation -->
-    <div class="nav">
-        <a href="#">Shop All</a>
-        <a href="#">Gud Bites (Cubes)</a>
-        <a href="#">Jaggery Powder</a>
-        <a href="#">Flavoured Collection</a>
-        <a href="#">Combos</a>
-        <a href="#">About Us</a>
-    </div>
-
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Bring Back the Pure Taste of Tradition</h1>
-            <p>India's finest organic jaggery cubes & powder. 100% natural • No chemicals • Ethically sourced</p>
-            <button onclick="alert('Welcome to ZOAMZ! 🧡')" style="margin-top:30px; padding:15px 40px; font-size:1.2rem; background:#DAA520; border:none; border-radius:50px; color:white; cursor:pointer;">
-            Shop Now
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Pure Tradition.<br>Modern Goodness.</h1>
+            <p class="text-xl md:text-2xl mb-8">Premium Organic Jaggery Cubes & Powder</p>
+            <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-full text-lg font-semibold transition">
+                Shop Now
             </button>
         </div>
     </section>
 
-    <div class="container">
-
-        <h2 class="section-title">Featured Products</h2>
-
-        <div class="products-grid" id="products">
-            <!-- Products populated by JS -->
+    <!-- Products Section -->
+    <section id="products" class="max-w-7xl mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold text-center text-amber-900 mb-12">Our Best Sellers</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+            <!-- Products will be added by JavaScript -->
         </div>
+    </section>
 
-    </div>
+    <!-- Why Choose Us -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Why ZOAMZ?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+                <div><i class="fa-solid fa-leaf text-4xl text-green-600 mb-4"></i><h3 class="font-semibold">100% Natural</h3><p class="text-gray-600">No chemicals, no additives</p></div>
+                <div><i class="fa-solid fa-truck text-4xl text-amber-700 mb-4"></i><h3 class="font-semibold">Fast Delivery</h3><p class="text-gray-600">Across India</p></div>
+                <div><i class="fa-solid fa-shield-halved text-4xl text-amber-800 mb-4"></i><h3 class="font-semibold">Farm to Table</h3><p class="text-gray-600">Direct from trusted farmers</p></div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <h2>ZOAMZ</h2>
-        <p>Premium Organic Jaggery • Made with Love in India</p>
-        <p>&copy; 2026 ZOAMZ. All rights reserved.</p>
-        <p style="margin-top:20px; opacity:0.7;">
-            This is a demo website created for <strong>ZOAMZ</strong> based on gudworld.in style.
-        </p>
+    <footer class="bg-amber-950 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-2">ZOAMZ</h2>
+            <p class="mb-6">Premium Organic Jaggery from the heart of India</p>
+            <p class="text-sm opacity-70">© 2026 ZOAMZ • All Rights Reserved</p>
+        </div>
     </footer>
 
     <script>
         const products = [
-            {
-                title: "5g ZOAMZ Gud Bites 250g (Pack of 3)",
-                price: 299,
-                original: 329,
-                img: "https://picsum.photos/id/1015/400/400"
-            },
-            {
-                title: "Superfine Jaggery Powder 300g",
-                price: 189,
-                original: 199,
-                img: "https://picsum.photos/id/201/400/400"
-            },
-            {
-                title: "Cardamom Gud Bites 300g",
-                price: 299,
-                original: 329,
-                img: "https://picsum.photos/id/870/400/400"
-            },
-            {
-                title: "Desi Ghee Gud Bites 300g",
-                price: 449,
-                original: 479,
-                img: "https://picsum.photos/id/431/400/400"
-            },
-            {
-                title: "Ginger Jaggery Powder 300g",
-                price: 329,
-                original: 349,
-                img: "https://picsum.photos/id/292/400/400"
-            },
-            {
-                title: "Immunity Blend Gud Bites 300g",
-                price: 399,
-                original: 429,
-                img: "https://picsum.photos/id/106/400/400"
-            }
+            { name: "ZOAMZ Gud Bites 250g (Pack of 3)", price: 299, old: 349, img: "https://picsum.photos/id/1015/400/400" },
+            { name: "Superfine Jaggery Powder 500g", price: 249, old: 299, img: "https://picsum.photos/id/201/400/400" },
+            { name: "Cardamom Flavoured Gud Bites", price: 329, old: 379, img: "https://picsum.photos/id/870/400/400" },
+            { name: "Desi Ghee Jaggery Cubes", price: 449, old: 499, img: "https://picsum.photos/id/431/400/400" },
+            { name: "Ginger Immunity Powder", price: 299, old: 349, img: "https://picsum.photos/id/292/400/400" },
+            { name: "Mixed Flavours Combo", price: 599, old: 699, img: "https://picsum.photos/id/106/400/400" }
         ];
 
-        const container = document.getElementById('products');
-        
-        products.forEach(product => {
+        const grid = document.getElementById('product-grid');
+
+        products.forEach(p => {
             const card = document.createElement('div');
-            card.className = 'product-card';
+            card.className = "product-card bg-white rounded-2xl overflow-hidden shadow-lg";
             card.innerHTML = `
-                <div class="product-img" style="background-image: url('${product.img}')"></div>
-                <div class="product-info">
-                    <h3 class="product-title">${product.title}</h3>
-                    <p>
-                        <span class="price">₹${product.price}</span>
-                        ${product.original ? `<span class="original-price">₹${product.original}</span>` : ''}
-                    </p>
-                    <button class="add-to-cart" onclick="addToCart('${product.title}')">Add to Cart</button>
+                <img src="${p.img}" class="w-full h-64 object-cover">
+                <div class="p-5">
+                    <h3 class="font-semibold text-lg mb-2">${p.name}</h3>
+                    <div class="flex items-center gap-3">
+                        <span class="text-2xl font-bold text-amber-800">₹${p.price}</span>
+                        <span class="text-gray-400 line-through">₹${p.old}</span>
+                    </div>
+                    <button onclick="addToCart('${p.name}')" 
+                            class="mt-4 w-full bg-amber-800 hover:bg-amber-900 text-white py-3 rounded-xl font-medium">
+                        Add to Cart
+                    </button>
                 </div>
             `;
-            container.appendChild(card);
+            grid.appendChild(card);
         });
 
         function addToCart(name) {
-            alert(`✅ ${name} added to cart!`);
+            alert(`✅ ${name} added to your cart!`);
         }
     </script>
-
 </body>
 </html>
